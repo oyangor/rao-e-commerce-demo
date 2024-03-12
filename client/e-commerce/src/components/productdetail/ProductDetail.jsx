@@ -22,7 +22,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/products/${id}`);
+        const res = await fetch(`https://rao-e-commerce-demo.onrender.com/products/${id}`);
         const data = await res.json();
         setProduct((prev) => data);
         setCurrentImage((prev) => data.firstImg);
@@ -62,7 +62,7 @@ const ProductDetail = () => {
         <div className='flex flex-1 gap-[25px]'>
           <div className='flex justify-center items-center'>
             <img
-              src={`http://localhost:5000/images/${currentImage}`}
+              src={`https://rao-e-commerce-demo.onrender.com/images/${currentImage}`}
               className='h-[400px] w-[400px] object-cover rounded-lg'
               alt=""
             />
@@ -99,13 +99,13 @@ const ProductDetail = () => {
           )}
           <div className='flex gap-[25px]'>
             <img
-              src={`http://localhost:5000/images/${product?.firstImg}`}
+              src={`https://rao-e-commerce-demo.onrender.com/images/${product?.firstImg}`}
               className='h-[100px] w-[100px] object-cover cursor-pointer mt-[30px]  bg-slate-300 rounded-lg'
               alt=""
               onClick={() => setCurrentImage((prev) => product?.firstImg)}
             />
             <img
-              src={`http://localhost:5000/images/${product?.secondImg}`}
+              src={`https://rao-e-commerce-demo.onrender.com/images/${product?.secondImg}`}
               className='h-[100px] w-[[100px]] object-cover cursor-pointer mt-[30px]  bg-slate-300 rounded-lg'
               alt=""
               onClick={() => setCurrentImage((prev) => product?.secondImg)}

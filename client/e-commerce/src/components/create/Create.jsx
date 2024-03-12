@@ -36,7 +36,7 @@ function Create() {
         formData2.append('filename', fileName2)
         formData2.append('secondImg', secondImg)
 
-        await fetch('http://localhost:5000/upload/firstImg', {
+        await fetch('https://rao-e-commerce-demo.onrender.com/upload/firstImg', {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -44,7 +44,7 @@ function Create() {
           body: formData1
         })
 
-        await fetch('http://localhost:5000/upload/secondImg', {
+        await fetch('https://rao-e-commerce-demo.onrender.com/upload/secondImg', {
           headers: {
             "Authorization": `Bearer ${token}`
           },
@@ -54,7 +54,7 @@ function Create() {
       }
       //upload product and navigate to product
 
-      const res = await fetch('http://localhost:5000/products/create', {
+      const res = await fetch('https://rao-e-commerce-demo.onrender.com/products/create', {
         headers: {
           'Content-Type': 'application/json',
           "Authorization": `Bearer ${token}`

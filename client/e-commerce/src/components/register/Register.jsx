@@ -20,7 +20,7 @@ function Register() {
         throw new Error('Password are not the same')
       }
 
-      const res = await fetch('http://localhost:5000/auth/register', {
+      const res = await fetch('https://rao-e-commerce-demo.onrender.com/auth/register', {
         headers: {
           "Content-Type": "application/json"
         },
