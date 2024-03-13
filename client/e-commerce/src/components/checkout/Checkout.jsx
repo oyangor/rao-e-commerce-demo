@@ -15,21 +15,21 @@ const Checkout = () => {
   }
 
   return (
-    <div className={classes.container}>
+    <div className='w-[100%] h-[100%] mt-0 md:mt-[100px] mb-20   '>
       <div className={classes.wrapper}>
         <div className={classes.top}>
-          <h1 className={classes.title}>Address Data</h1>
-          <div className={classes.addressData}>
+          <h1 className="mb-[2px] font-semibold text-2xl border-b-2">Address Data</h1>
+          <div className=''>
             {Object.entries(address).map(([key, value]) => (
               <div className={classes.info} key={key}>
-                <h3>{key}: </h3>
+                <h3 className="">{key}: </h3>
                 <span>{value}</span>
               </div>
             ))}
           </div>
         </div>
         <div className={classes.bottom}>
-          <h1 className={classes.title}>Products</h1>
+          <h1 className='font-bold text-3xl ml-12 border-b-2'>Products</h1>
           <div className={classes.products}>
             {products.map((product) => (
               <div key={product.id} className={classes.product}>
@@ -54,9 +54,9 @@ const Checkout = () => {
             <div className={classes.totalPrice}>${totalPriceProducts()}</div>
           </span>
         </div>
-        <div className="order-now bg-black">
-          <Link to="/final" className={classes.orderBtn}>
-            Order
+        <div className="orderBtn mb-7 ml--7 bg-amber-500 rounded-xl p-2 hover:bg-amber-300 md:absolute md:right-[60px] md:bottom-0 md:align-middle md:w-36 text-center text-nowrap">
+          <Link to="/final" className='w-[100%] max-w-[200px] static top-0 right-0  '>
+            Order Now
           </Link>
         </div>
       </div>
